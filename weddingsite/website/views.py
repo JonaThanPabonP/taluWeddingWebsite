@@ -2,13 +2,13 @@ from django.shortcuts import render
 from .models import Categoria, Foto
 
 # Create your views here.
-def index(request):
-    
-    return render(request, 'index.html')
+def inicio(request):
+    return render(request, 'inicio.html')
 
-def fotos(request):
-    fts = Foto.objects.all()
-    context = {
-        "fotos": fts,
-    }
-    return render(request, 'index.html', context)
+
+def nosotros(request):
+    return render(request, 'nosotros.html')
+
+
+def galeria(request):
+    return render(request, 'galeria.html')
